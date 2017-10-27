@@ -2,6 +2,14 @@
 
 function obtener_nodos(){
 
+
+
+  const pre = document.getElementById('nodos');
+  const preDB = firebase.database().ref().child('object');
+  preDB.on('value', snap => console.log(snap.val()));
+
+
+
    var html='';
    var messagesRef = new Firebase("https://pruebas-csv.firebaseio.com/"); 
 

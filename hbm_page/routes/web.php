@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/csv/listar', function () {
+    return view('csv.listar_nodos');
+});
 
 
 /*Route::get('csv', function () {

@@ -19,9 +19,13 @@ class UploadController extends Controller
     }
     public function upload(Request $request)
     {
+     
        //sube el archivo a la carpeta storage/app/csv
+        $file = $request->file('fileToUpload')->store('public/csv');
+     //$file = Storage::putFile('csv', $request->file('fileToUpload'));
+        //$path = $request->file('avatar')->store('csv');
+      // $file = Storage::disk('public_uploads')->put('csv', file('fileToUpload'));
         //$file = $request->file('fileToUpload')->store('csv');
-        $file = $request->file('fileToUpload')->store('csv');
         $url = storage_path().$file;
 
       //  $b = str_replace('\\', '/',$url);
@@ -31,7 +35,7 @@ class UploadController extends Controller
         $data['ruta'] = $file;
 
         $data['nodo'] = $request->input('nomb_tabla');
-        return view('csv.listar_nodos',['ruta'=>$data]);
+        return view('csv.listar_nodos_au',['ruta'=>$data]);
      
     }
 }

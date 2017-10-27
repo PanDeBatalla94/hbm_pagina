@@ -24,16 +24,32 @@
   <!-- Material Design Lite -->
   
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script> 
+
   {!! Html::style('css/bootstrap/css/bootstrap.min.css') !!}
   {!! Html::script('css/bootstrap/js/jquery-3.2.1.min.js') !!}
   {!! Html::script('css/bootstrap/js/bootstrap.min.js') !!}
-  {!! Html::script('js/subir_csv.js') !!}
+  {!! Html::script('js/listas/listas.js') !!}
 @yield('js')
+
 
   <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
 
-
-   
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+<script type="text/javascript">
+     var config = {
+    apiKey: "AIzaSyC4IXtK4W4CCoSWJnI66BQAQzT7fhjggo4",
+    authDomain: "pruebas-csv.firebaseapp.com",
+    databaseURL: "https://pruebas-csv.firebaseio.com",
+    projectId: "pruebas-csv",
+    storageBucket: "pruebas-csv.appspot.com",
+    messagingSenderId: "597256255260"
+  };
+  firebase.initializeApp(config);
+</script>
 
 </head>
 <body>
